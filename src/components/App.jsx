@@ -25,7 +25,7 @@ const App = () => {
   return (
     <main>
       <h1>Phonebook</h1>
-      {/* <ContactForm /> */}
+      <ContactForm />
       <SearchBox onSearch={handleSearch} />
       <ContactList
         contacts={filteredContacts}
