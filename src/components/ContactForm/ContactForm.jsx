@@ -1,19 +1,18 @@
 import React from "react";
 import s from "./ContactForm.module.css";
 import * as Yup from "yup";
-import { Formik, Form, Field, ErrorMessage } from "formik"; // Импортируйте необходимые компоненты из Formik
+import { Formik, Form, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 
-// Определение схемы валидации
 const registerSchema = Yup.object({
   name: Yup.string()
     .required("This field is required")
     .min(3, "Name must be at least 3 characters")
-    .max(20, "Name must be at most 20 characters"),
+    .max(30, "Name must be at most 30 characters"),
   number: Yup.string()
     .required("This field is required")
     .matches(/^[0-9]+$/, "Number must contain only digits")
-    .min(5, "Number must be at least 5 digits")
+    .min(3, "Number must be at least 3 digits")
     .max(15, "Number must be at most 15 digits"),
 });
 
